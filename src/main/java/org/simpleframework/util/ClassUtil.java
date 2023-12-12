@@ -9,6 +9,7 @@ import java.lang.reflect.Field;
 import java.net.URL;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.Set;
 
 @Slf4j
 public class ClassUtil {
@@ -18,7 +19,7 @@ public class ClassUtil {
     /**
      * 获取包下类集合
      *
-     * @return 类集合
+     * @return 类集合 或null
      * @parampackageName包名
      */
     public static Set<Class<?>> extractPackageClass(String packageName) {
@@ -34,7 +35,7 @@ public class ClassUtil {
         Set<Class<?>> classSet = null;
         //过滤出文件类型的资源
         if (url.getProtocol().equalsIgnoreCase(FILE_PROTOCOL)) {
-            classSet = new HashSet<Class<?>>();
+            classSet = new HashSet<>();
             File packageDirectory = new File(url.getPath());
             extractClassFile(classSet, packageDirectory, packageName);
         }
