@@ -1,11 +1,17 @@
 package org.simpleframework.core;
 
-import org.simpleframework.mvc.DispatcherServlet;
 import com.imooc.controller.frontend.MainPageController;
 import com.imooc.service.solo.HeadLineService;
 import com.imooc.service.solo.impl.HeadLineServiceImpl;
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
 import org.simpleframework.core.annotation.Controller;
+import org.simpleframework.mvc.DispatcherServlet;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class BeanContainerTest {
